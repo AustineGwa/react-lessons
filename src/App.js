@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import react from "react";
+import CreateTweet from "./components/CreateTweet";
+import TweetList from "./components/TweetList";
 
 function App() {
+
+  const name = "Austine Gwa"
+  const message = "This  is my react \nprops test"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <h1>Hello react App</h1>
+       <CreateTweet/>
+       <TweetList author={name} message={message}/>
     </div>
+    
   );
 }
 

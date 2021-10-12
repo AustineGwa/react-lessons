@@ -2,13 +2,13 @@ import React from "react"
 import Tweet from "./Tweet"
 import { useState } from "react"
 
-const TweetList = ({author,tweets}) => {
-const [name, setName] = useState("")
+const TweetList = ({name,tweets}) => {
 
  return(
      <div className="tweet-list">
-         <Tweet name = {author} tweets={tweets[0]}/>    
-         <Tweet name = {author} tweets={tweets[1]}/>
+         {tweets.map(tweet =>
+             <Tweet name={name}
+             message={tweet} />)}
      </div>
   
  )

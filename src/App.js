@@ -5,20 +5,18 @@ import TweetList from "./components/TweetList";
 
 function App() {
 
-  const [name, setName] = useState("Austine")
+  const [name, setName] = useState("Austine Gwa")
   const  [textInput, setTextInput] = useState("")
   const  [tweets,setTweets] = useState([])
 
   return (
     <div>
-       <h1>Hello  {name}</h1>
-  
-       <CreateTweet 
+    <CreateTweet 
        textInput={textInput} 
        setTextInput={setTextInput}
        tweets={tweets} 
        setTweets={setTweets}/>
-       <TweetList author={name} tweets={tweets}/>
+       <TweetList name={name} tweets={tweets}/>
     </div>
     
   );

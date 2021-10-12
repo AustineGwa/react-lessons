@@ -4,16 +4,23 @@ import { useState } from "react";
 const CreateTweet = () => {
  //states
  const  [textInput, setTextInput] = useState("")
+ const  [tweets,setTweets] = useState([])
 
     //Functions
     const userInputHandler = (e) =>{
+       e.preventDefault();
        setTextInput(e.target.value)
+    }
+
+    const submitTweetHandler = (e) => {
+       e.preventDefault()
+       setTweets([...tweets,textInput])
     }
 
    
 
  return(
-     <form>
+     <form onSubmit={submitTweetHandler}>
         <textarea 
         value = {textInput}
         onChange={userInputHandler}
